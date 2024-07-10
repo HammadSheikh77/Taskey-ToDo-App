@@ -1,4 +1,5 @@
-import 'package:class_assigment/viewmodel/Login&Signup_Controller/loginscreen_controller.dart';
+import 'package:class_assigment/view/Login&Signup/signup_screen.dart';
+import 'package:class_assigment/viewmodel/LoginScreen_Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -107,19 +108,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 35),
+            Padding(
+              padding: const EdgeInsets.only(top: 35),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Not Registrar Yet? ',
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
                   ),
-                  Text(
-                    'Sign Up',
-                    style: TextStyle(
-                        color: Color(0xff756EF3), fontWeight: FontWeight.w600),
+                  InkWell(
+                    onTap: () {
+                      Get.to(const SignupScreen());
+                    },
+                    child: const Text(
+                      'Sign Up',
+                      style: TextStyle(
+                          color: Color(0xff756EF3),
+                          fontWeight: FontWeight.w600),
+                    ),
                   )
                 ],
               ),
