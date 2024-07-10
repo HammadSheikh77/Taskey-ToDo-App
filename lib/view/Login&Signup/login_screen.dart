@@ -11,7 +11,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final LoginscreenController controller = Get.put(LoginscreenController());
+  final LoginscreenController loginController =
+      Get.put(LoginscreenController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(80))),
-                  hintText: 'Email',
+                  hintText: 'Enter Your Email',
                   prefixIcon: Icon(Icons.email_outlined),
                 ),
               ),
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(80))),
-                  hintText: 'Password',
+                  hintText: 'Enter Your Password',
                   prefixIcon: Icon(Icons.lock_open_outlined),
                 ),
               ),
@@ -91,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const Padding(
               padding: EdgeInsets.only(left: 160),
               child: Text(
-                'Sign In with',
+                'SignIn with',
                 style: TextStyle(fontSize: 14),
               ),
             ),
