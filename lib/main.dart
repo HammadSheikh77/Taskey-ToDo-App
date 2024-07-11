@@ -1,4 +1,4 @@
-import 'package:class_assigment/view/SplashScreen/screen_one.dart';
+import 'package:class_assigment/view/SplashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ScreenOne(),
+      home: SplashScreen(),
     );
   }
 }
