@@ -54,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(40))),
-                  height: MediaQuery.of(context).size.height * 0.54,
+                  height: MediaQuery.of(context).size.height * 0.55,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15),

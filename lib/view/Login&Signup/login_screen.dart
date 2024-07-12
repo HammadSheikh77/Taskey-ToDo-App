@@ -1,3 +1,4 @@
+import 'package:class_assigment/view/HomeScreen/home_screen.dart';
 import 'package:class_assigment/view/Login&Signup/signup_screen.dart';
 import 'package:class_assigment/viewmodel/LoginScreen_Controller.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,7 +87,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, top: 10),
-              child: Image.asset('assets/icons/Sign In.png'),
+              child: InkWell(
+                  onTap: () {
+                    Get.to(const HomeScreen());
+                  },
+                  child: Image.asset('assets/icons/Sign In.png')),
             ),
             const Padding(
               padding: EdgeInsets.only(left: 160),
