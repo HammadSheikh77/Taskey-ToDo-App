@@ -34,7 +34,7 @@ class _MenuScreenState extends State<MenuScreen> {
         children: [
           MenuButton(
               title: 'Permission',
-              iconButton: Icons.toggle_on,
+              iconButton: Icons.toggle_off,
               iconColor: Color(0xff756EF3),
               iconSize: 50),
           MenuButton(
