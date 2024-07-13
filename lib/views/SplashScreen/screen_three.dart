@@ -1,16 +1,15 @@
-import 'package:class_assigment/view/Login&Signup/login_screen.dart';
-import 'package:class_assigment/view/SplashScreen/screen_three.dart';
+import 'package:class_assigment/views/Login&Signup/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({super.key});
+class ScreenThree extends StatefulWidget {
+  const ScreenThree({super.key});
 
   @override
-  State<ScreenTwo> createState() => _Screen2State();
+  State<ScreenThree> createState() => _Screen3State();
 }
 
-class _Screen2State extends State<ScreenTwo> {
+class _Screen3State extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,27 +21,27 @@ class _Screen2State extends State<ScreenTwo> {
               children: [
                 Image.asset('assets/images/Circle.png'),
                 Padding(
-                  padding: const EdgeInsets.only(top: 115),
+                  padding: const EdgeInsets.only(top: 155),
                   child: Center(
-                      child: Image.asset('assets/images/Image box 1.png')),
+                      child: Image.asset('assets/images/Image 1 sc3.png')),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 205, left: 245),
-                  child: Image.asset('assets/images/Image box 2.png'),
+                  padding: const EdgeInsets.only(left: 240, top: 276),
+                  child: Image.asset('assets/images/Image 2 sc3.png'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 140, left: 10),
-                  child: Image.asset('assets/images/Image box 3.png'),
-                )
+                  padding: const EdgeInsets.only(left: 16, top: 130),
+                  child: Image.asset('assets/images/Image 3 sc3.png'),
+                ),
               ],
             ),
             Container(
               padding: const EdgeInsets.only(left: 30, top: 20),
-              child: Image.asset('assets/images/Text sc2.png'),
+              child: Image.asset('assets/images/Text sc3.png'),
             ),
             Container(
                 padding: const EdgeInsets.only(left: 30, top: 15),
-                child: Image.asset('assets/images/Sliedbar sc2.png')),
+                child: Image.asset('assets/images/Slidebar sc3.png')),
             Padding(
                 padding: const EdgeInsets.only(left: 30, top: 25),
                 child: InkWell(
@@ -57,7 +56,7 @@ class _Screen2State extends State<ScreenTwo> {
               padding: const EdgeInsets.only(left: 310),
               child: InkWell(
                   onTap: () {
-                    Get.to(const ScreenThree());
+                    Get.to(const LoginScreen());
                   },
                   child: Image.asset('assets/images/Next Button.png')),
             )

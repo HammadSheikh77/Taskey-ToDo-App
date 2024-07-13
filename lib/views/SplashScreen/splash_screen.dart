@@ -1,4 +1,4 @@
-import 'package:class_assigment/view/SplashScreen/screen_one.dart';
+import 'package:class_assigment/views/SplashScreen/screen_one.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,30 +13,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff6652FF),
+      backgroundColor: const Color.fromARGB(255,111, 87, 248),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Stack(
               children: [
-                Image.asset('assets/images/Ellipse 29.png'),
                 Padding(
-                  padding: const EdgeInsets.only(left: 74),
-                  child: Image.asset('assets/images/Ellipse 35.png'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 111),
-                  child: Image.asset(
-                    'assets/images/Ellipse 11.png',
-                    width: 300,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 34),
+                  padding: const EdgeInsets.only(top: 1),
                   child: Image.asset(
                     'assets/images/image 5.png',
                     height: 342,
-                    width: 412,
+                    width: 431,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -53,8 +41,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
-                          topRight: Radius.circular(40))),
-                  height: MediaQuery.of(context).size.height * 0.55,
+                          topRight: Radius.circular(50))),
+                  height: MediaQuery.of(context).size.height * 0.59,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15),

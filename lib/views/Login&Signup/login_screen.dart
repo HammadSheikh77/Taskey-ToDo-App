@@ -1,6 +1,6 @@
-import 'package:class_assigment/view/HomeScreen/home_screen.dart';
-import 'package:class_assigment/view/Login&Signup/signup_screen.dart';
-import 'package:class_assigment/viewmodel/LoginScreen_Controller.dart';
+import 'package:class_assigment/views/HomeScreen/home_screen.dart';
+import 'package:class_assigment/views/Login&Signup/signup_screen.dart';
+import 'package:class_assigment/viewModels/LoginScreen_Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

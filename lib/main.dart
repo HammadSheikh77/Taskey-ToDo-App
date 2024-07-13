@@ -1,4 +1,5 @@
-import 'package:class_assigment/view/SplashScreen/splash_screen.dart';
+import 'package:class_assigment/viewModels/Theme_Controller.dart';
+import 'package:class_assigment/views/SplashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,9 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeController().themeMode.value,
+      initialBinding: BindingsBuilder(() {
+        Get.put(ThemeController());
+      }),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

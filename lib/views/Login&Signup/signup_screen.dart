@@ -1,5 +1,5 @@
-import 'package:class_assigment/view/Login&Signup/login_screen.dart';
-import 'package:class_assigment/viewmodel/SignupScreen_Controller.dart';
+import 'package:class_assigment/views/Login&Signup/login_screen.dart';
+import 'package:class_assigment/viewModels/SignupScreen_Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
