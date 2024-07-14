@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class MenuScreen extends StatefulWidget {
+class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
 
-  @override
-  State<MenuScreen> createState() => _MenuScreenState();
-}
-
-class _MenuScreenState extends State<MenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +68,8 @@ class _MenuScreenState extends State<MenuScreen> {
               ],
             ),
           ),
-          Center(child: Padding(
+          Center(
+              child: Padding(
             padding: const EdgeInsets.only(top: 40),
             child: Image.asset('assets/icons/logout Button.png'),
           ))

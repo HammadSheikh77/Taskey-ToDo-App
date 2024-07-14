@@ -1,19 +1,15 @@
-import 'package:class_assigment/views/HomeScreen/home_screen.dart';
+import 'package:class_assigment/views/HomeScreen/bottomnavi.dart';
 import 'package:class_assigment/views/Login&Signup/signup_screen.dart';
 import 'package:class_assigment/viewModels/LoginScreen_Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   final LoginscreenController loginController =
       Get.put(LoginscreenController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     icon: const Icon(Icons.arrow_back_ios_new)),
                 const Padding(
-                  padding: EdgeInsets.only(left: 140),
+                  padding: EdgeInsets.only(left: 130),
                   child: Text(
                     'Sign In',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
@@ -62,6 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(80))),
+                      focusedBorder:  OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80))),
                   hintText: 'Enter Your Email',
                   prefixIcon: Icon(Icons.email_outlined),
                 ),
@@ -72,6 +70,8 @@ class _LoginScreenState extends State<LoginScreen> {
               child: TextFormField(
                 decoration: const InputDecoration(
                   enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80))),
+                      focusedBorder:  OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(80))),
                   hintText: 'Enter Your Password',
                   prefixIcon: Icon(Icons.lock_open_outlined),
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.only(left: 20, top: 10),
               child: InkWell(
                   onTap: () {
-                    Get.to(const HomeScreen());
+                    Get.to(Bottomnavi());
                   },
                   child: Image.asset('assets/icons/Sign In.png')),
             ),
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.to(const SignupScreen());
+                      Get.to(SignupScreen());
                     },
                     child: const Text(
                       'Sign Up',

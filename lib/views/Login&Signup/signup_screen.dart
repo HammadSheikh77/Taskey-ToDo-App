@@ -1,18 +1,15 @@
+import 'package:class_assigment/views/HomeScreen/bottomnavi.dart';
 import 'package:class_assigment/views/Login&Signup/login_screen.dart';
 import 'package:class_assigment/viewModels/SignupScreen_Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  SignupScreen({super.key});
 
-  @override
-  State<SignupScreen> createState() => _SignupScreenState();
-}
-
-class _SignupScreenState extends State<SignupScreen> {
   final SignupscreenController signupController =
       Get.put(SignupscreenController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +24,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   },
                   icon: const Icon(Icons.arrow_back_ios_new)),
               const Padding(
-                padding: EdgeInsets.only(left: 140),
+                padding: EdgeInsets.only(left: 130),
                 child: Text(
                   'Sign Up',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
@@ -59,6 +56,8 @@ class _SignupScreenState extends State<SignupScreen> {
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(80)),
+                  focusedBorder: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80))),
                   hintText: 'Enter Your Name',
                   prefixIcon: const Icon(Icons.person_2_outlined)),
             ),
@@ -70,6 +69,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(80),
                   ),
+                  focusedBorder: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80))),
                   hintText: 'Enter Your Email',
                   prefixIcon: const Icon(Icons.email_outlined)),
             ),
@@ -81,13 +82,19 @@ class _SignupScreenState extends State<SignupScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(80),
                   ),
+                  focusedBorder: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80))),
                   hintText: 'Enter Your Pssword',
                   prefixIcon: const Icon(Icons.lock_open_outlined)),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10, left: 20),
-            child: Image.asset('assets/icons/Sign Iup.png'),
+            child: InkWell(
+                onTap: () {
+                  Get.to(Bottomnavi());
+                },
+                child: Image.asset('assets/icons/Sign Iup.png')),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 160),
@@ -120,7 +127,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(const LoginScreen());
+                    Get.to(LoginScreen());
                   },
                   child: const Text(
                     'Sign In',

@@ -2,14 +2,9 @@ import 'package:class_assigment/views/Login&Signup/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ScreenThree extends StatefulWidget {
+class ScreenThree extends StatelessWidget {
   const ScreenThree({super.key});
 
-  @override
-  State<ScreenThree> createState() => _Screen3State();
-}
-
-class _Screen3State extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +41,7 @@ class _Screen3State extends State<ScreenThree> {
                 padding: const EdgeInsets.only(left: 30, top: 25),
                 child: InkWell(
                     onTap: () {
-                      Get.to(const LoginScreen());
+                      Get.to(LoginScreen());
                     },
                     child: const Text(
                       'Skip',
@@ -56,7 +51,7 @@ class _Screen3State extends State<ScreenThree> {
               padding: const EdgeInsets.only(left: 310),
               child: InkWell(
                   onTap: () {
-                    Get.to(const LoginScreen());
+                    Get.to(LoginScreen());
                   },
                   child: Image.asset('assets/images/Next Button.png')),
             )

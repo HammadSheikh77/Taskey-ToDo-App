@@ -3,14 +3,9 @@ import 'package:class_assigment/views/SplashScreen/Screen_two.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ScreenOne extends StatefulWidget {
+class ScreenOne extends StatelessWidget {
   const ScreenOne({super.key});
 
-  @override
-  State<ScreenOne> createState() => _Screen1State();
-}
-
-class _Screen1State extends State<ScreenOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +40,7 @@ class _Screen1State extends State<ScreenOne> {
                 padding: const EdgeInsets.only(left: 30, top: 25),
                 child: InkWell(
                     onTap: () {
-                      Get.to(const LoginScreen());
+                      Get.to(LoginScreen());
                     },
                     child: const Text(
                       'Skip',
@@ -57,7 +52,7 @@ class _Screen1State extends State<ScreenOne> {
                   onTap: () {
                     Get.to(const ScreenTwo());
                   },
-                  child: Image.asset('assets/images/Next Button.png')),
+                  child: Image.asset('assets/images/Next Button.png',)),
             )
           ],
         ),
