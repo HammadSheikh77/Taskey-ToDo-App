@@ -73,10 +73,25 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 41),
-              child:
-                  Center(child: Image.asset('assets/images/In Progress.png')),
+            const Padding(
+              padding: EdgeInsets.only(top: 41),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 24),
+                    child: Text(
+                      'In Progress',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: Icon(Icons.arrow_forward_ios_outlined),
+                  ),
+                ],
+              ),
             ),
             const InprogressWidget(
               heading: 'Productivity Mobile App',

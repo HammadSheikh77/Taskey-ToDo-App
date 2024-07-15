@@ -1,75 +1,105 @@
-// import 'package:class_assigment/widgets/menubutton.dart';
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
+import 'package:class_assigment/viewModels/Theme_Controller.dart';
+import 'package:class_assigment/widgets/settingwidget.dart';
+import 'package:class_assigment/widgets/switch_button.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-// class SettingScreen extends StatefulWidget {
-//   const SettingScreen({super.key});
+class SettingScreen extends StatelessWidget {
+  final ThemeController controller = Get.put(ThemeController());
+  SettingScreen({super.key});
 
-//   @override
-//   State<SettingScreen> createState() => _SettingScreenState();
-// }
-
-// class _SettingScreenState extends State<SettingScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         leading: Padding(
-//           padding: const EdgeInsets.only(left: 24),
-//           child: IconButton(
-//               onPressed: () {
-//                 Get.back();
-//               },
-//               icon: const Icon(Icons.arrow_back_ios)),
-//         ),
-//         title: const Padding(
-//           padding: const EdgeInsets.only(left: 90),
-//           child: Text(
-//             'Settings',
-//             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-//           ),
-//         ),
-//       ),
-//       body: Column(
-//         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//         children: [
-//           MenuButton(
-//               title: 'Permission',
-//               iconButton: Icons.toggle_on,
-//               iconColor: Color(0xff756EF3),
-//               iconSize: 50),
-//           MenuButton(
-//               title: 'Push Notification',
-//               iconButton: Icons.toggle_off,
-//               iconColor: Color(0xffD7D7D7),
-//               iconSize: 50),
-//           MenuButton(
-//               title: 'Dark Mood',
-//               iconButton: Icons.toggle_off,
-//               iconColor: Color(0xffD7D7D7),
-//               iconSize: 50),
-//           MenuButton(
-//               title: 'Security',
-//               iconButton: Icons.arrow_forward_ios,
-//               iconColor: Color(0xff002055),
-//               iconSize: 20),
-//           MenuButton(
-//               title: 'Help',
-//               iconButton: Icons.arrow_forward_ios,
-//               iconColor: Color(0xff002055),
-//               iconSize: 20),
-//           MenuButton(
-//               title: 'Langauge',
-//               iconButton: Icons.arrow_forward_ios,
-//               iconColor: Color(0xff002055),
-//               iconSize: 20),
-//           MenuButton(
-//               title: 'About Application',
-//               iconButton: Icons.arrow_forward_ios,
-//               iconColor: Color(0xff002055),
-//               iconSize: 20),
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Padding(
+              padding: EdgeInsets.only(left: 14),
+              child: Icon(Icons.arrow_back_ios_new_outlined),
+            )),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 100),
+          child: Text(
+            'Settings',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+      body: Column(
+        children: [
+          Settingwidget(
+              title: 'Permission',
+              icon: const Icon(
+                Icons.toggle_on,
+                size: 40,
+              ),
+              onTap: () {}),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Settingwidget(
+              title: 'Push Notification',
+              icon: const Icon(
+                Icons.toggle_off,
+                size: 40,
+              ),
+              onTap: () {}),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Obx(
+            () => SwitchButton(
+                title: 'Dark Mode',
+                value: controller.themeMode.value == ThemeMode.dark,
+                onChanged: (Value) {
+                  controller
+                      .changeTheme(Value ? ThemeMode.dark : ThemeMode.light);
+                }),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Settingwidget(
+              title: 'Security',
+              icon: const Icon(
+                Icons.arrow_forward_ios_outlined,
+              ),
+              onTap: () {}),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Settingwidget(
+              title: 'Help',
+              icon: const Icon(
+                Icons.arrow_forward_ios_outlined,
+              ),
+              onTap: () {}),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Settingwidget(
+              title: 'Langauge',
+              icon: const Icon(
+                Icons.arrow_forward_ios_outlined,
+              ),
+              onTap: () {}),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Settingwidget(
+              title: 'About Application',
+              icon: const Icon(
+                Icons.arrow_forward_ios_outlined,
+              ),
+              onTap: () {}),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+        ],
+      ),
+    );
+  }
+}

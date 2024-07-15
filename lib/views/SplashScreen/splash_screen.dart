@@ -8,7 +8,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255,111, 87, 248),
+      backgroundColor: const Color.fromARGB(255, 111, 87, 248),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,55 +29,58 @@ class SplashScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Stack(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(50),
-                          topRight: Radius.circular(50))),
-                  height: MediaQuery.of(context).size.height * 0.59,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child:
-                      Center(child: Image.asset('assets/images/Sliedbar.png')),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 90),
-                  child: Center(child: Image.asset('assets/images/Logo.png')),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 160),
-                  child: Center(
-                    child: Text(
-                      'Building Better\n\t\t\tWorkplaces ',
-                      style:
-                          TextStyle(fontSize: 37, fontWeight: FontWeight.bold),
+            Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50))),
+              height: MediaQuery.of(context).size.height * 0.59,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Center(
+                        child: Image.asset('assets/images/Sliedbar.png')),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 55),
+                    child: Center(child: Image.asset('assets/images/Logo.png')),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5),
+                    child: Center(
+                      child: Text(
+                        'Building Better\n\t\t\tWorkplaces ',
+                        style: TextStyle(
+                            fontSize: 37, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 270),
-                  child: Center(
-                      child: const Text(
-                          'Create a unique emotional story that\n\t\t\t\t\tdescribes better than words')),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 315),
-                  child: Center(child: Image.asset('assets/images/Base.png')),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 340),
-                  child: Center(
-                      child: InkWell(
-                          onTap: () {
-                            Get.to(const ScreenOne());
-                          },
-                          child: Image.asset('assets/icons/Get Started.png'))),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Center(
+                        child: const Text(
+                            'Create a unique emotional story that\n\t\t\t\t\tdescribes better than words')),
+                  ),
+                  Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20, left: 10),
+                        child: Image.asset('assets/images/Base.png'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40, left: 10),
+                        child: InkWell(
+                            onTap: () {
+                              Get.to(const ScreenOne());
+                            },
+                            child: Image.asset('assets/icons/Get Started.png')),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),

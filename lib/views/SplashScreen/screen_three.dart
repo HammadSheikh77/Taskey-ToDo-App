@@ -30,13 +30,43 @@ class ScreenThree extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              padding: const EdgeInsets.only(left: 30, top: 20),
-              child: Image.asset('assets/images/Text sc3.png'),
+            const Padding(
+              padding: EdgeInsets.only(left: 25, top: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Task Management',
+                    style: TextStyle(fontSize: 18, color: Color(0xff756EF3)),
+                  ),
+                  Text(
+                    'Manage your',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Tasks\t',
+                        style:
+                            TextStyle(fontSize: 35, color: Color(0xff756EF3)),
+                      ),
+                      Text(
+                        'quickly for',
+                        style: TextStyle(fontSize: 35),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    'Results✌',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                ],
+              ),
             ),
-            Container(
-                padding: const EdgeInsets.only(left: 30, top: 15),
-                child: Image.asset('assets/images/Slidebar sc3.png')),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, top: 15),
+              child: Image.asset('assets/images/Slidebar sc3.png'),
+            ),
             Padding(
                 padding: const EdgeInsets.only(left: 30, top: 25),
                 child: InkWell(

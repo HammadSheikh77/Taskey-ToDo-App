@@ -1,4 +1,4 @@
-import 'package:class_assigment/views/HomeScreen/bottomnavi.dart';
+import 'package:class_assigment/widgets/bottomnavi.dart';
 import 'package:class_assigment/views/Login&Signup/login_screen.dart';
 import 'package:class_assigment/viewModels/SignupScreen_Controller.dart';
 import 'package:flutter/material.dart';

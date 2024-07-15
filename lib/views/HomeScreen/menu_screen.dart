@@ -21,8 +21,31 @@ class MenuScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 135, top: 40),
-            child: Image.asset('assets/images/View Profile.png'),
+            padding: const EdgeInsets.only(left: 150, top: 40),
+            child: Image.asset('assets/images/profile pic.png'),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 140),
+            child: Text(
+              'Alvart Ainstain',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 155),
+            child: Text(
+              '@albart.ainstain',
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 140, top: 10),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  side: const BorderSide(color: Color(0xff756EF3)),
+                ),
+                onPressed: () {},
+                child: const Text('View Profile')),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 24, top: 25),

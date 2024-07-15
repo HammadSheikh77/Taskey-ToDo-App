@@ -26,7 +26,7 @@ class InprogressWidget extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.10,
           width: MediaQuery.of(context).size.width * 0.90,
           decoration: BoxDecoration(
-              color: const Color(0xffFFFFFF),
+              // color: const Color(0xffFFFFFF),
               borderRadius: BorderRadius.circular(20)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

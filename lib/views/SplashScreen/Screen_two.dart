@@ -31,13 +31,43 @@ class ScreenTwo extends StatelessWidget {
                 )
               ],
             ),
-            Container(
-              padding: const EdgeInsets.only(left: 30, top: 20),
-              child: Image.asset('assets/images/Text sc2.png'),
+            const Padding(
+              padding: EdgeInsets.only(left: 25, top: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Task Management',
+                    style: TextStyle(fontSize: 18, color: Color(0xff756EF3)),
+                  ),
+                  Text(
+                    'Work more',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Structured\t',
+                        style:
+                            TextStyle(fontSize: 35, color: Color(0xff756EF3)),
+                      ),
+                      Text(
+                        'and',
+                        style: TextStyle(fontSize: 35),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    'Organized 👌',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                ],
+              ),
             ),
-            Container(
-                padding: const EdgeInsets.only(left: 30, top: 15),
-                child: Image.asset('assets/images/Sliedbar sc2.png')),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, top: 15),
+              child: Image.asset('assets/images/Sliedbar sc2.png'),
+            ),
             Padding(
                 padding: const EdgeInsets.only(left: 30, top: 25),
                 child: InkWell(
