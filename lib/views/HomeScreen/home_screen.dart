@@ -12,15 +12,14 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.only(
-            left: 24,
-          ),
-          child: InkWell(
-              onTap: () {
-                Get.to(const MenuScreen());
-              },
-              child: Image.asset('assets/icons/Menu.png')),
-        ),
+            padding: const EdgeInsets.only(
+              left: 24,
+            ),
+            child: IconButton(
+                onPressed: () {
+                  Get.to(const MenuScreen());
+                },
+                icon: const Icon(Icons.menu_rounded))),
         title: const Padding(
           padding: EdgeInsets.only(
             left: 90,
@@ -30,10 +29,10 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
           ),
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 24),
-            child: Image.asset('assets/icons/Notifications.png'),
+            padding: EdgeInsets.only(right: 25),
+            child: Icon(Icons.notifications_none_rounded),
           ),
         ],
       ),

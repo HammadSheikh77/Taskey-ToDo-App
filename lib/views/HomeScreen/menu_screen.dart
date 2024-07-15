@@ -1,3 +1,4 @@
+import 'package:class_assigment/views/ProfileScreen/editProfile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,13 +10,12 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.only(left: 24),
-          child: InkWell(
-              onTap: () {
-                Get.back();
-              },
-              child: Image.asset('assets/images/Cross.png')),
-        ),
+            padding: const EdgeInsets.only(left: 24),
+            child: IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: const Icon(Icons.cancel_outlined))),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,17 +44,16 @@ class MenuScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   side: const BorderSide(color: Color(0xff756EF3)),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(const EditprofileScreen());
+                },
                 child: const Text('View Profile')),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 24, top: 25),
             child: Text(
               'Workspace',
-              style: TextStyle(
-                  fontSize: 18,
-                  color: Color(0xff002055),
-                  fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
@@ -65,10 +64,7 @@ class MenuScreen extends StatelessWidget {
             padding: EdgeInsets.only(left: 24, top: 25),
             child: Text(
               'Manage',
-              style: TextStyle(
-                  fontSize: 18,
-                  color: const Color(0xff002055),
-                  fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(

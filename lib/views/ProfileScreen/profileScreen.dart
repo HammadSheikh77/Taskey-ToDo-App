@@ -1,3 +1,4 @@
+import 'package:class_assigment/views/ProfileScreen/editProfile_screen.dart';
 import 'package:class_assigment/views/ProfileScreen/setting_screen.dart';
 import 'package:class_assigment/widgets/profilescrwidget.dart';
 import 'package:flutter/material.dart';
@@ -52,17 +53,19 @@ class Profilescreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     side: const BorderSide(color: Color(0xff756EF3)),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(const EditprofileScreen());
+                  },
                   child: const Text('Edit')),
             ),
             const Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 94, top: 20),
+                  padding: EdgeInsets.only(left: 94, top: 15),
                   child: Icon(Icons.access_time),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 142),
+                  padding: EdgeInsets.only(left: 142, top: 15),
                   child: Icon(Icons.check_circle_outline),
                 ),
               ],
@@ -109,21 +112,27 @@ class Profilescreen extends StatelessWidget {
                 children: [
                   Profilescrwidget(
                       tittle: 'My Project',
-                      icon: const Icon(Icons.arrow_forward_ios_outlined,),
+                      icon: const Icon(
+                        Icons.arrow_forward_ios_outlined,
+                      ),
                       onTap: () {}),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
                   Profilescrwidget(
                       tittle: 'Join a Team',
-                      icon: const Icon(Icons.arrow_forward_ios_outlined,),
+                      icon: const Icon(
+                        Icons.arrow_forward_ios_outlined,
+                      ),
                       onTap: () {}),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
                   Profilescrwidget(
                       tittle: 'Settings',
-                      icon: const Icon(Icons.arrow_forward_ios_outlined,),
+                      icon: const Icon(
+                        Icons.arrow_forward_ios_outlined,
+                      ),
                       onTap: () {
                         Get.to(SettingScreen());
                       }),
@@ -132,7 +141,9 @@ class Profilescreen extends StatelessWidget {
                   ),
                   Profilescrwidget(
                       tittle: 'My Task',
-                      icon: const Icon(Icons.arrow_forward_ios_outlined,),
+                      icon: const Icon(
+                        Icons.arrow_forward_ios_outlined,
+                      ),
                       onTap: () {}),
                 ],
               ),

@@ -60,17 +60,17 @@ class SplashScreen extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.only(top: 20),
                     child: Center(
-                        child: const Text(
+                        child: Text(
                             'Create a unique emotional story that\n\t\t\t\t\tdescribes better than words')),
                   ),
                   Stack(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 20, left: 10),
+                        padding: const EdgeInsets.only(top: 20,left: 10),
                         child: Image.asset('assets/images/Base.png'),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 40, left: 10),
+                        padding: const EdgeInsets.only(top: 40,left: 10),
                         child: InkWell(
                             onTap: () {
                               Get.to(const ScreenOne());
