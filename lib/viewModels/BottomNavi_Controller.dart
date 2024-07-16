@@ -10,7 +10,7 @@ class BottomnaviController extends GetxController {
   List pages = [
     const HomeScreen(),
     const Projectscreen(),
-    const Addscreen(),
+    const AddTask(),
     const Chatscreen(),
     const Profilescreen(),
   ];

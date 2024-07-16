@@ -7,6 +7,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isLightTheme = Theme.of(context).brightness == Brightness.light;
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 111, 87, 248),
       body: SingleChildScrollView(
@@ -30,9 +31,9 @@ class SplashScreen extends StatelessWidget {
               ],
             ),
             Container(
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                  color: isLightTheme ? Colors.white : Colors.black,
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(50),
                       topRight: Radius.circular(50))),
               height: MediaQuery.of(context).size.height * 0.59,
@@ -66,11 +67,11 @@ class SplashScreen extends StatelessWidget {
                   Stack(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 20,left: 10),
+                        padding: const EdgeInsets.only(top: 20, left: 10),
                         child: Image.asset('assets/images/Base.png'),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 40,left: 10),
+                        padding: const EdgeInsets.only(top: 40, left: 10),
                         child: InkWell(
                             onTap: () {
                               Get.to(const ScreenOne());
